@@ -1,0 +1,22 @@
+html{
+    box-sizing: border-box;  /*anytime you add pading to any element that can streatch your page to prevent it to happning we make the border box */
+}
+
+body{
+    margin: 0;    
+    /* allsides margin 0 */
+    min-height: 100vh;
+    /* it will make the minimum page height one full page at least */
+    background-color: azure;
+}
+
+
+
+
+
+
+
+
+
+
+
