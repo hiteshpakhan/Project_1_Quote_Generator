@@ -17,6 +17,7 @@ and past the GENERATED CSS CODE into the body section inside the css
 https://fonts.google.com/
 choose the favorite font and copy the selected style link
 and past that import line in the top of the css 
+and add the font family to the css and other stuff
 
 
 
