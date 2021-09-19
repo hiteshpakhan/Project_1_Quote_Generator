@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 html{
     box-sizing: border-box;  /*anytime you add pading to any element that can streatch your page to prevent it to happning we make the border box */
 }
