@@ -42,6 +42,25 @@ body{
     font-size: 4rem;
 }
 
+.class_quote_author{
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+    .class_quote_container {
+        margin: auto 10px;
+    }
+
+    .class_quote_text{
+        font-size: 2.5rem;
+    }
+}
+
+
 
 
 
