@@ -43,7 +43,7 @@ function tweetQuote(){
 }
 
 //event listener
-newQuoteBtn.addEventListener('click',newQuote);
+newQuoteBtn.addEventListener('click',newQuote);   //very imp you dont have to give the () after calling the function here
 twitterBtn.addEventListener('click',tweetQuote);
 
 getQuots();
