@@ -1,6 +1,6 @@
 let apiQuots = [];
 
-function newQuote() {
+function localQuote() {
     // to pick the randome number 
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     console.log(quote);
@@ -11,9 +11,9 @@ async function getQuots(){
     try{
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();   //we already assign the apiQuotes as a globle variable
-        newQuote();  //it will bring the any single quote out of them all
+        localQuote();  //it will bring the any single quote out of them all
     }catch(error){
-        console.log(error)
+        console.log(error);
     }
 }
 getQuots();
