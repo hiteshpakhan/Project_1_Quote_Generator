@@ -1,5 +1,5 @@
 let apiQuots = [];
-const getQuots = async () => {
+async function getQuots(){
     const apiUrl = 'https://type.fit/api/quotes'
     try{
         const response = await fetch(apiUrl);
