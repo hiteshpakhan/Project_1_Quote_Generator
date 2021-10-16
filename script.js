@@ -6,7 +6,7 @@ const newQuoteBtn = document.getElementById('new-quote');       //this is the ne
 
 let apiQuots = [];
 
-function localQuote() {
+function newQuote() {
     // to pick the randome number 
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
@@ -30,11 +30,22 @@ async function getQuots(){
     try{
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();   //we already assign the apiQuotes as a globle variable
-        localQuote();  //it will bring the any single quote out of them all
+        newQuote();  //it will bring the any single quote out of them all
     }catch(error){
         console.log(error);
     }
 }
+
+function tweetQuote(){
+    const twitterUrl = "https://twitter.com/intent/tweet?text="+quoteText.textContent+"-"+authorText.textContent;   //there the url that we copyed from the twitter site 
+    // const twitterUrl = `https://twitter.com/intent/tweet=${quoteText.textContent}-${authorText.textContent}`;
+    window.open(twitterUrl,'_blank');   //it will open the url into another page
+}
+
+//event listener
+newQuoteBtn.addEventListener('click',newQuote);
+twitterBtn.addEventListener('click',tweetQuote);
+
 getQuots();
 
 
