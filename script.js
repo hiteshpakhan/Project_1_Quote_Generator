@@ -1,3 +1,9 @@
+const quoteContainer = document.getElementById('quote-container');    //this will cover the container
+const quoteText = document.getElementById('quote');     //this is for the quote be written
+const authorText = document.getElementById('author');       //this is where the author name will be displayed
+const twitterBtn = document.getElementById('twitter');      //this the twitter button 
+const newQuoteBtn = document.getElementById('new-quote');       //this is the new quote button
+
 let apiQuots = [];
 
 function localQuote() {
