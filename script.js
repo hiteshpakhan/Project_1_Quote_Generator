@@ -3,10 +3,24 @@ const quoteText = document.getElementById('quote');     //this is for the quote 
 const authorText = document.getElementById('author');       //this is where the author name will be displayed
 const twitterBtn = document.getElementById('twitter');      //this the twitter button 
 const newQuoteBtn = document.getElementById('new-quote');       //this is the new quote button
+const loader = document.getElementById('loader')        //this will take loader
 
 let apiQuots = [];
 
+// show loader
+function loading(){
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+// hide loader
+function complete(){
+    quoteContainer.hidden = false;
+    loader.hidden = true;
+}
+
 function newQuote() {
+    loading();  //this will show the loading animation
     // to pick the randome number 
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
@@ -23,9 +37,12 @@ function newQuote() {
     }else{
         quoteText.classList.remove('long-quote');
     }
+    
+    complete();   //it will hide the loader here
 }
 
 async function getQuots(){
+    loading();  //it will get us the loading animation 
     const apiUrl = 'https://type.fit/api/quotes';
     try{
         const response = await fetch(apiUrl);
