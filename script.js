@@ -9,6 +9,8 @@ let apiQuots = [];
 function localQuote() {
     // to pick the randome number 
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+    authorText.textContent = quote.author;
+    quoteText.textContent = quote.text; 
     console.log(quote);
 }
 
