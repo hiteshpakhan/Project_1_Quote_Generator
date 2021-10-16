@@ -9,9 +9,20 @@ let apiQuots = [];
 function localQuote() {
     // to pick the randome number 
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    authorText.textContent = quote.author;
-    quoteText.textContent = quote.text; 
-    console.log(quote);
+
+    quoteText.textContent = quote.text;
+    
+    if(!quote.author){    //it will check wheather the author name present or not
+        authorText.textContent = "unknown";
+    } else {
+        authorText.textContent = quote.author;
+    }
+
+    if(quote.text.length > 50){
+        quoteText.classList.add('long-quote');
+    }else{
+        quoteText.classList.remove('long-quote');
+    }
 }
 
 async function getQuots(){
