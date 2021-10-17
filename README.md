@@ -1,4 +1,4 @@
-* project side demo link: https://hiteshpakhan.github.io/Project_1_Quote_Generator/
+* project side demo link: https://hiteshpakhan.github.io/Quote_Generator_small_project1/
 
 
 # INFORMATION
