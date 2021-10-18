@@ -4,6 +4,7 @@ html{
     box-sizing: border-box;
 }
 
+
 body{
     margin: 0;
     color: #000;
@@ -114,7 +115,9 @@ button:active{
     }
 }
 
-
+.btm{
+    text-align: center;
+}
 
 
 

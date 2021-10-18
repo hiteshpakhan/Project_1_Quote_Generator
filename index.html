@@ -9,25 +9,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">     <!-- font-awesome link like tailwind and bootstrap but it will provide us the icons -->
 </head>
 <body>
-    <div class="quote-container" id="quote-container">  <!-- the hole container -->
-        <div class="quote-text">    <!-- this will bind the quotation mark and the quote -->
-            <i class="fas fa-quote-left"></i>   <!-- the quotetion mark at the left -->
-            <span id="quote"></span>
+    <div>
+
+        <div class="quote-container" id="quote-container">  <!-- the hole container -->
+            <div class="quote-text">    <!-- this will bind the quotation mark and the quote -->
+                <i class="fas fa-quote-left"></i>   <!-- the quotetion mark at the left -->
+                <span id="quote"></span>
+            </div>
+            <div class="quote-author">  <!-- author -->
+                <span id="author"></span>    <!-- author name -->
+            </div>
+            <div class="button-container">
+                <button class="twitter-button" id="twitter" title="tweet this">   <!-- a simple button -->
+                    <i class="fab fa-twitter"> <!-- this is the icon of the twitter --> </i>
+                </button>
+                <button id="new-quote">New Quote</button> 
+            </div>
         </div>
-        <div class="quote-author">  <!-- author -->
-            <span id="author"></span>    <!-- author name -->
-        </div>
-        <div class="button-container">
-            <button class="twitter-button" id="twitter" title="tweet this">   <!-- a simple button -->
-                <i class="fab fa-twitter"> <!-- this is the icon of the twitter --> </i>
-            </button>
-           <button id="new-quote">New Quote</button> 
-        </div>
+        
+        <!-- loader -->
+        <div class="loader" id="loader"></div>
+    
+    
+    
+        <h5 class="btm">-Created by : Hitesh Sanjay Pakhan<br>
+            Instruct by : Andrei Neagoie, Jacinto Wong
+        </h5>
+        
     </div>
-
-    <!-- loader -->
-    <div class="loader" id="loader"></div>
-
+        
+    
     <script src="script.js"></script>
 </body>
 </html>
